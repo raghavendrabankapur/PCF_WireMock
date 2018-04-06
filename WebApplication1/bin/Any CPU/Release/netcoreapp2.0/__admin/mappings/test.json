@@ -1,0 +1,51 @@
+﻿{
+  "Request": {
+    "Path": {
+      "Matchers": [
+        {
+          "Name": "WildcardMatcher",
+          "Pattern": "/static/mapping"
+        }
+      ]
+    },
+    "Methods": [
+      "get"
+    ]
+  },
+  "Response": {
+     "StatusCode": 200,
+    "BodyAsJson": {
+      "GetWithStaticMapping": {
+        "test": {
+          "node1": "value1",
+          "node2": "value2",
+          "arrayelementsinobject": [ "arrayelement1", "arrayelement2" ]
+        },
+        "test1": {
+          "node1": "value1",
+          "node2": "value2",
+          "arrayelementsinobject": [ "arrayelement1", "arrayelement2" ]
+        },
+        "test2": {
+          "node1": "value1",
+          "node2": "value2",
+          "arrayelementsinobject": [ "arrayelement1", "arrayelement2" ]
+        },
+        "test3": {
+          "node1": "value1",
+          "node2": "value2",
+          "arrayelementsinobject": [ "arrayelement1", "arrayelement2" ],
+          "test": {
+            "node1": "value1",
+            "node2": "value2",
+            "arrayelementsinobject": [ "arrayelement1", "arrayelement2" ]
+          }
+        },
+        "arrayelements": [ "arrayelement1", "arrayelement2" ]
+      }
+    },
+    "Headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
